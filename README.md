@@ -2,10 +2,12 @@
 Rat con C2
 Este es un RAT para ubunto con keyloger y captutra de panatalla hecho en 100% python 
 
-` install apt python`
-`python --version`
+```sh
+install apt python
+python --version `
 
-`nano cliente.py ` 
+```
+nano cliente.p
 
 Cambiar a la IP del atacante 
 

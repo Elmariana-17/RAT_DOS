@@ -4,12 +4,13 @@ Este es un RAT para ubunto con keyloger y captutra de panatalla hecho en 100% py
 
 ```sh
 install apt python
-python --version `
+python --version
+`
 
-```
+```sh
 nano cliente.p
 
-Cambiar a la IP del atacante 
+``` a la IP del atacante 
 
 `Python3 ---.py` 
 

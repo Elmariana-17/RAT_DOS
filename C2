@@ -1,0 +1,19 @@
+# cripto.py
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad, unpad
+import base64
+import os
+
+CLAVE = b"lab_rat_2024_key"  # 16 bytes exactos
+
+def cifrar(texto: str) -> bytes:
+    iv = os.urandom(16)
+    cipher = AES.new(CLAVE, AES.MODE_CBC, iv)
+    datos = cipher.encrypt(pad(texto.encode(), AES.block_size))
+    return base64.b64encode(iv + datos) + b"\n"
+
+def descifrar(datos_b64: bytes) -> str:
+    datos = base64.b64decode(datos_b64.strip())
+    iv, cifrado = datos[:16], datos[16:]
+    cipher = AES.new(CLAVE, AES.MODE_CBC, iv)
+    return unpad(cipher.decrypt(cifrado), AES.block_size).decode()

